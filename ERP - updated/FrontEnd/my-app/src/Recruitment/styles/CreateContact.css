@@ -1,0 +1,412 @@
+.create-contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.create-contact .form-container {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin: 20px auto;
+  padding: 30px;
+}
+
+.create-contact .header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.create-contact .header-section h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.create-contact .header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.create-contact .name-fieldset {
+  display: flex;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  align-items: center;
+  padding: 0;
+}
+
+.create-contact textarea {
+  border: 1px solid var(--jobopening-primary-color);
+}
+
+.create-contact input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #087465;
+}
+
+.create-contact .title-select {
+  width: 20%;
+  background: white;
+  padding: 8px;
+  border: 1px solid var(--jobopening-primary-color);
+  font-size: 14px;
+  outline: none;
+}
+
+.create-contact .react-tel-input .form-control {padding: 10px;
+  border: 1px solid var(--jobopening-primary-color);
+  border-radius: 5px;
+  height: 42px;
+  width: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  
+}
+
+.create-contact .name-input {
+  flex-grow: 1;
+  border: none;
+  padding: 8px;
+  border: 1px solid var(--jobopening-primary-color);
+  font-size: 14px;
+  outline: none;
+}
+
+.create-contact .edit-layout-btn {
+  background: none;
+  border: none;
+  color: #087465;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.create-contact .right-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.create-contact .cancel-btn,
+.create-contact .save-new-btn {
+  background-color: #f6f6f6;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.create-contact .save-new-btn {
+  color: #087465;
+}
+
+.create-contact .save-dropdown {
+  display: flex;
+}
+
+.create-contact .save-btn,
+.create-contact .dropdown-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  border: 1px solid #087465;
+}
+
+.create-contact .save-btn {
+  background: linear-gradient(180deg, #019d88, #0d2e26);
+  border-radius: 4px 0 0 4px;
+}
+
+.create-contact .dropdown-btn {
+  background: linear-gradient(180deg, #019d88, #0d2e26);
+  border-radius: 0 4px 4px 0;
+}
+
+.create-contact .section {
+  background-color: white;
+  padding: 20px;
+  overflow: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.create-contact .section h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.create-contact .form-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.create-contact .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.create-contact .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-contact .checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.create-contact label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.quill-editor {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.quill-editor .ql-container {
+  border: none !important;
+}
+
+.quill-editor .ql-toolbar {
+  border-radius: 5px 5px 0 0;
+  background-color: #f1f1f1;
+}
+
+/* Updated Editor Height */
+.quill-editor .ql-editor {
+  min-height: 200px !important;
+  max-height: 500px;
+  border: 1px solid var(--jobopening-primary-color);
+  overflow-y: auto;
+  margin-bottom: 5px;
+}
+.create-contact .copy-address {
+  position: relative;
+  display: inline-block;
+}
+
+.create-contact .copy-dropdown {
+  background: linear-gradient(180deg, #019d88, #0d2e26);
+  color: white;
+  border: 1px solid #087465;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.create-contact .copy-dropdown:hover {
+  background-color: #065f50;
+}
+
+.create-contact .copy-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.create-contact .copy-address:hover .copy-options {
+  display: block;
+}
+
+.create-contact .copy-options div {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.create-contact .copy-options div:hover {
+  background-color: #f6f6f6;
+}
+/* Container for the attachment section */
+.create-contact .attachment-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Label styling */
+.create-contact .attachment-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Button container */
+.create-contact .attachment-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Browse Button Styling */
+.create-contact .browse-btn {
+  background: linear-gradient(180deg, #019d88, #0d2e26);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.create-contact .browse-btn:hover {
+  background-color: #065f50;
+}
+
+.create-contact .browse-btn:focus {
+  outline: 2px solid #019d88;
+}
+
+/* Hidden file input */
+.create-contact .hidden-file-input {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+.create-contact .required {
+  color: red;
+  margin-left: 2px;
+}
+
+.create-contact input,
+.create-contact select {
+  padding: 10px;
+  border: 1px solid var(--jobopening-primary-color);
+  border-radius: 5px;
+  height: 42px;
+  width: 100%;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.create-contact .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eaeaea;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.create-contact .footer-tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.create-contact .smart-chat {
+  color: #999;
+  font-size: 14px;
+}
+
+.create-contact .help-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.create-contact .form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.create-contact .cancel,
+.create-contact .save {
+  background: linear-gradient(180deg, #019d88, #0d2e26);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.create-contact .cancel {
+  background: #fa0404;
+}
+
+.create-contact .save {
+  background: linear-gradient(180deg, #019d88, #0d2e26);
+  color: white;
+}

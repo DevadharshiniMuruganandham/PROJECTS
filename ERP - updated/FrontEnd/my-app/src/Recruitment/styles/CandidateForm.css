@@ -1,0 +1,332 @@
+/* Main Form Container */
+.candidate-form {
+    max-width: 100%;
+    margin:5px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+    transition: none; /* Removed zoom-in effect */
+    margin-bottom: 10px;
+    overflow: auto;
+}
+.required-asterisk{
+color: red;
+}
+/* Form Header */
+.candidate-form .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: rgb(13, 12, 12);
+    border-radius: 10px 10px 0 0;
+}
+
+.candidate-form .top h2 {
+    font-size: 22px;
+  
+}
+
+.candidate-form .buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Buttons */
+.candidate-form button {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.candidate-form .primary-save {
+    background: linear-gradient(180deg, #019d88, #0d2e26);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.candidate-form .primary-save:hover {
+    background: linear-gradient(180deg, #019d88, #0d2e26);
+    border: 2px solid #00796b;
+}
+
+.candidate-form .cancel {
+    background: #d32f2f;
+    color: white;
+}
+
+.candidate-form .cancel:hover {
+    background-color: #b3b3b3;
+}
+
+/* Form Sections */
+.candidate-form .section {
+    margin-top: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.candidate-form .section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00796b;
+    margin-bottom: 18px;
+}
+
+.candidate-form .container-edu h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00796b;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Form Fields */
+.candidate-form .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Forces 2 columns per row */
+    gap: 20px;
+}
+
+.candidate-form label {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.candidate-form input,
+.candidate-form select,
+.candidate-form textarea {
+    padding: 10px;
+    border: 1px solid #019d88;
+    border-radius: 5px;
+    height: 42px;
+    width: 100%;
+    margin-top: 5px;
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+    transition: border 0.3s ease-in-out;
+}
+
+.candidate-form input:focus,
+.candidate-form select:focus,
+.candidate-form textarea:focus {
+    border: 1px solid #0d2e26;
+    outline: none;
+    box-shadow: 0 0 5px rgba(1, 157, 136, 0.5);
+}
+
+/* First Name Input with Prefix */
+.first-name-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.first-name-container select {
+    max-width: 120px;
+    padding: 12px;
+    border: 1px solid #019d88;
+    border-radius: 8px;
+    background: #f8f8f8;
+}
+
+.first-name-container select:focus {
+    border: 1px solid #0d2e26;
+    outline: none;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(1, 157, 136, 0.5);
+}
+
+/* Phone Input */
+.candidate-form .react-tel-input {
+    width: 100%;
+    position: relative;
+    margin-top: 5px;
+
+}
+.first-name-container {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 10px; /* Space between select and input */
+    width: 100%;
+}
+
+.first-name-container select {
+    max-width: 100px; /* Adjust width as needed */
+    height: 42px; /* Match input field height */
+    padding: 10px;
+    border: 1px solid #019d88;
+    border-radius: 5px;
+    background: #f8f8f8;
+}
+
+.first-name-container input {
+    flex-grow: 1; /* Makes input field take remaining space */
+    height: 42px; /* Ensures height consistency */
+}
+
+input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    box-shadow: 0 0 0px 1000px white inset !important;
+    transition: background-color 5000s ease-in-out 0s;}
+.candidate-form .react-tel-input .flag-dropdown {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #019d88;
+    padding: 0 2px;
+}
+
+.candidate-form .react-tel-input .form-control {
+    padding-left: 50px !important; /* Adjust the left padding to make space for the flag */
+    border: 1px solid #019d88 !important;
+    border-radius: 5px;
+    height: 42px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: white;
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+    transition: border 0.3s ease-in-out;
+}
+
+.candidate-form .react-tel-input .flag-container {
+    position: absolute;
+    left: 10px;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+/* Education & Experience Section */
+.container-edu {
+    margin-top: 30px;
+}
+
+.container-edu .add-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(180deg, #019d88, #0d2e26);
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.container-edu .add-btn:hover {
+    background: #005a4e;
+}
+
+.container-edu .input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.container-edu .input-container input {
+    flex: 1;
+    min-width: 220px;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f8f8f8;
+}
+
+.container-edu .remove-btn {
+    background: #d32f2f;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+.container-edu .remove-btn:hover {
+    background: #b71c1c;
+}
+
+/* Attachments Section */
+.attachment-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00796b;
+    margin-top: 20px;
+}
+
+.attachment-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.attachment-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.attachment-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background: #f8f8f8;
+    cursor: pointer;
+}
+
+.attachment-input:hover {
+    background: rgba(0, 121, 107, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .candidate-form {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .candidate-form .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .candidate-form .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .container-edu .input-container {
+        flex-direction: column;
+    }
+}
+
+/* Placeholder Styling */
+::placeholder {
+    color: #888 !important;
+    opacity: 1 !important;
+}

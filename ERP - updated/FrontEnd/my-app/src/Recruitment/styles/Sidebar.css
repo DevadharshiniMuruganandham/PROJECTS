@@ -1,0 +1,263 @@
+/* Sidebar Container */
+.sidebar-container {
+  display: flex;
+  align-items: stretch; /* Ensures both sidebar and content stretch equally */
+  min-height: 100vh;
+}
+
+.sidebar {
+  height: auto; /* Allow dynamic height */
+  min-height: 100vh; /* Ensures sidebar covers at least the viewport */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #019d88, #0d2e26);
+  color: white;
+  transition: width 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  position: relative;
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.initial-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.logo {
+  width: 130px;
+  height: 55px;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .logo {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Pin Button */
+.pin-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pin-button:hover {
+  transform: scale(1.1);
+}
+
+.pin-icon.pinned {
+  transform: rotate(45deg);
+}
+
+/* Sidebar Menu */
+/* Sidebar Menu - Hide Scrollbar */
+.menu {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+  margin-top: 12px;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.menu::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Menu Items */
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.menu li:hover {
+  background: rgba(255, 255, 255, 0.15);
+  padding-left: 20px;
+  border-radius: 70px;
+}
+
+/* Icons */
+.icon {
+  font-size: 22px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menu Text */
+.menu-text {
+  flex-grow: 1;
+  font-size: 17px;
+  font-weight: 500;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.sidebar.collapsed .menu-text {
+  display: none;
+}
+
+/* Dynamic Submenu */
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Submenu */
+.submenu {
+  list-style: none;
+  padding-left: 50px;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+/* Show submenu when expanded */
+.menu-item.open + .submenu {
+  max-height: none; /* Allows full expansion */
+  overflow: visible;
+}
+
+/* Submenu Items */
+.submenu-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.submenu-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  padding-left: 18px;
+}
+
+/* Submenu Icon */
+.submenu-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate submenu icon when open */
+.menu-item.open .submenu-icon {
+  transform: rotate(180deg);
+}
+
+/* Ensure Sidebar Expands with More Items */
+.sidebar {
+  height: auto; /* Allows expansion */
+  min-height: 100vh;
+  overflow-y: auto; /* Enables scrolling if needed */
+}
+
+/* Settings & Logout Section */
+.settings-section {
+  margin-top: auto;
+  padding: 12px 0;
+  width: 100%;
+}
+
+/* Ensure settings stay visible */
+.settings-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.settings-section li {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.settings-section li:hover {
+  background: rgba(255, 255, 255, 0.15);
+  padding-left: 22px;
+  border-radius: 50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar.pinned {
+    width: 250px;
+  }
+
+  .menu-text {
+    display: none;
+  }
+
+  .submenu {
+    display: none;
+  }
+
+  .sidebar.pinned .menu-text,
+  .sidebar.pinned .submenu {
+    display: block;
+  }
+}
+
+/* Adjust sidebar height dynamically on small screens */
+@media (max-height: 600px) {
+  .sidebar {
+    height: auto;
+    min-height: 100%;
+  }
+}
+
+/* Prevents menu from overflowing on smaller screens */
+@media (max-height: 500px) {
+  .menu {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+}

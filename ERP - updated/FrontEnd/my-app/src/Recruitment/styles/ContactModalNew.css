@@ -1,0 +1,140 @@
+/* ================= Contact Modal Overlay ================= */
+.contact-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* ================= Contact Modal Container ================= */
+  .contact-modal-container {
+    background: #fff;
+    width: 650px;
+    max-width: 95%;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .contact-modal-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  .contact-modal-content {
+    margin-top: 15px;
+  }
+  
+  /* ================= Contact Form Fields ================= */
+  .contact-modal-label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  .contact-modal-input,
+  .contact-modal-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* ================= Client Name Section ================= */
+  .contact-modal-client-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-modal-client-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact-modal-client-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    background: none;
+    border: none;
+  }
+  
+  /* ================= Phone Input Styling ================= */
+  .contact-modal-phone-input .react-tel-input {
+    width: 100%;
+  }
+  
+  .contact-modal-phone-input .react-tel-input .form-control {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+  }
+  
+  /* ================= Table Styling ================= */
+  .contact-modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  .contact-modal-table th,
+  .contact-modal-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .contact-modal-table th {
+    background-color: #f8f9fa;
+  }
+  
+  /* ================= Buttons ================= */
+  .contact-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
+  
+  .contact-modal-btn {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .contact-modal-btn.cancel {
+    background-color: #ccc;
+    color: black;
+  }
+  
+  .contact-modal-btn.save {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .contact-modal-btn.associate {
+    background-color: #28a745;
+    color: white;
+  }
+  
